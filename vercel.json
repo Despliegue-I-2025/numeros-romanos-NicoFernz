@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "routes": [
+        {
+            "src": "/r2a",
+            "dest": "/api/conversions"
+        },
+        {
+            "src": "/a2r",
+            "dest": "/api/conversions"
+        }
+    ]
+}
