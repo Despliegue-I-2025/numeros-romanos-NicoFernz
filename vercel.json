@@ -1,13 +1,27 @@
 {
     "version": 2,
+    "functions": {
+        "api/*.js": {
+            "memory": 128,
+            "maxDuration": 10
+        }
+    },
     "routes": [
         {
-            "src": "/r2a",
-            "dest": "/api/conversions"
+            "src": "/r2a(\\?.*)?$",
+            "dest": "/api/r2a.js"
         },
         {
-            "src": "/a2r",
-            "dest": "/api/conversions"
+            "src": "/a2r(\\?.*)?$",
+            "dest": "/api/a2r.js"
+        },
+        {
+            "src": "/api/r2a(\\?.*)?$",
+            "dest": "/api/r2a.js"
+        },
+        {
+            "src": "/api/a2r(\\?.*)?$",
+            "dest": "/api/a2r.js"
         }
     ]
 }
